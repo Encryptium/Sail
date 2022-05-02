@@ -6,7 +6,7 @@ import os
 # Create the application instance
 app = Flask(__name__, template_folder='templates')
 # Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = os.environ['SECRET_KEY']
 
 # Index Page
 @app.route('/')
